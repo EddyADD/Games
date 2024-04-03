@@ -2,17 +2,18 @@ package games;
 
 public class Cuadrado extends GamesF{
     public void cuadrado(int option){
-        String character = Integer.toString(option);
+        String selection;
+        selection = String.valueOf(option);
         if (option==1) {
-            character = "*";
-            figure(character);
+            selection = "*";
+            figure(selection);
 
         }else if (option == 2) {
-            character = "@";
-            figure(character);
+            selection = "@";
+            figure(selection);
         }else if (option == 3) {
-            character = "+";
-            figure(character);
+            selection = "+";
+            figure(selection);
         }
 
     }
@@ -22,7 +23,7 @@ public class Cuadrado extends GamesF{
             for (int j = 0; j < num ; j++) {
                 System.out.print(character+ "  ");
             }
-            System.out.println("");
+            System.out.println(" ");
         }
     }
 }

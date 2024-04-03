@@ -23,7 +23,7 @@ public class Rectangulo extends GamesF{
             for (int j = 1; j < high ; j++) {
                 System.out.print(character + "  ");
             }
-            System.out.println("");
+            System.out.println(" ");
         }
     }
 

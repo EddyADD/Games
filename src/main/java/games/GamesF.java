@@ -1,22 +1,13 @@
 package games;
-import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.sql.SQLOutput;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class GamesF {
     static int select;
     static int option;
-    char letter;
     static boolean continuar;
     //constructores
     public GamesF(){
-    }
-    public GamesF(int select, int option, char letter) {
-        this.select = select;
-        this.option = option;
-        this.letter = letter;
     }
     //main
     public static void main(String[] args) {
@@ -34,7 +25,7 @@ public class GamesF {
                 System.out.print(" Select one figure: -> ");
                 select = inn.nextInt();
 
-                if (select <4){
+                if (select <=4){
                     System.out.println("1. * ");
                     System.out.println("2. @ ");
                     System.out.println("3. + ");
@@ -67,7 +58,8 @@ public class GamesF {
                             continuar = true;
                             break;
                         case 4:
-                            Circulo cir = new Circulo();
+                            Circulo circle = new Circulo();
+                            circle.circulo(option);
                             System.out.println("press enter to continue ");
                             inn.nextLine();
                             limpiarConsola();
@@ -81,11 +73,11 @@ public class GamesF {
 
                     }
                 } else if (select == 5){
-                    System.out.println("******* bye ****** ");
+                    System.out.println("\n\n******* bye ****** ");
                     inn.nextLine();
                     continuar = false;
                 } else {
-                    System.out.println("try other number");
+                    System.out.println("\n\n --- Try other number --- ");
                     limpiarConsola();
                     continuar=true;
                 }
@@ -105,7 +97,7 @@ public class GamesF {
 
     public static void limpiarConsola() {
         // Este método imprime 50 líneas en blanco para "limpiar" la consola
-        for (int i = 0; i < 7; ++i) {
+        for (int i = 0; i < 5; ++i) {
             System.out.println();
         }
     }

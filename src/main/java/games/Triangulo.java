@@ -3,7 +3,7 @@ package games;
 public class Triangulo extends GamesF {
     public void trianguloisoles(int T){
         //*
-        String character = Integer.toString(T);
+        String character = String.valueOf(T);
         if (T==1) {
             character = "*";
             figure(character);
@@ -23,7 +23,7 @@ public class Triangulo extends GamesF {
             for (int j = 1; j <= i ; j++) {
                 System.out.print(character + " ");
             }
-            System.out.println("");
+            System.out.println(" ");
         }
     }
 }
